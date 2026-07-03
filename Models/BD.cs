@@ -1,13 +1,15 @@
-namespace TP4.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using TP4.Models;
+
+namespace TP4.Models;
+
 public class BD{
     private string _connectionString = @"Server=localhost; 
     DataBase=TP04; Integrated Security=True;TrustServerCertificate=True;";
 
 
-    public List<Jugadores> ObtenerTodos(){
+    public List<Jugadores> obtenerTodos(){
         List<Jugadores> jugadores = new List<Jugadores>();
         using(SqlConnection connection = new SqlConnection(_connectionString)){
             string query = "SELECT * FROM Jugadores";
@@ -46,12 +48,14 @@ public class BD{
 
         }
     }
-    return id;
     
 
     public void PegarFiguritas(int idJugador){
         string query = "INSERT INTO FiguritaUsuario (IdFigurita, IdAlbum) VALUES (@idFigurita, @idAlbum)";
         using(SqlConnection connection = new SqlConnection(_connectionString)){
+        
+
+        }
     }
 
 }
