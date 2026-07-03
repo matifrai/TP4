@@ -20,7 +20,7 @@ public class BD{
         Jugadores jugador = null;
         string query = "SELECT * FROM Jugadores WHERE Numero = @pID";
         using(SqlConnection connection = new SqlConnection(_connectionString)){
-            jugador = connection.QueryFirstOrDefault<Jugadores>(query, new {pID = ID})
+            jugador = connection.QueryFirstOrDefault<Jugadores>(query, new {pID = ID});
         }
         return jugador;
     } 
@@ -32,7 +32,7 @@ public class BD{
             jugadores = connection.Query<Jugadores>(query).ToList();
         }
         List<Jugadores> sobre = new List<Jugadores>();
-        for(int i = 0; i<5; i++;){
+        for(int i = 0; i < 5; i++ ){
             Random aleatorio = new Random();
             int numero = aleatorio.Next(0, 20);
             sobre.Add(jugadores[numero]);
@@ -43,9 +43,11 @@ public class BD{
     public int VerificarFiguritas (int id){
         string query = "SELECT * FROM FiguritasPegadas WHERE IdFigurita = @idFigurit";
         using(SqlConnection connection = new SqlConnection(_connectionString)){
+
+        }
     }
     return id;
-    }
+    
 
     public void PegarFiguritas(int idJugador){
         string query = "INSERT INTO FiguritaUsuario (IdFigurita, IdAlbum) VALUES (@idFigurita, @idAlbum)";

@@ -6,8 +6,23 @@ namespace TP4.Controllers;
 
 public class AlbumController : Controller
 {
-    public IActionResult Index()
-    {
+    public IActionResult Index(){
         return View();
     } 
+
+    public IActionResult Sobres(){
+        return View();
+    }
+
+    public IActionResult Album(){
+        return View();
+    }
+
+
+
+
+
+
+
+
 }
