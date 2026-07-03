@@ -2,7 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Sobres</h1>
+<h1>Tu Sobre:</h1>
+@foreach(Jugadores jugador in ViewBag.JugadoresSobre)
+{
+    <img src="@BD.ObtenerFoto(jugador.Id)" />
+}
+
+
 
 <form method="post">
     <button type="submit">Abrir sobre</button>

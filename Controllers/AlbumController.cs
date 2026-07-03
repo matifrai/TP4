@@ -11,6 +11,7 @@ public class AlbumController : Controller
     } 
 
     public IActionResult Sobres(){
+        ViewBag.JugadoresSobre = BD.abrirSobre();
         return View();
     }
 
