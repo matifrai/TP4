@@ -5,10 +5,8 @@
 <h1>Tu Sobre:</h1>
 @foreach(Jugadores jugador in ViewBag.JugadoresSobre)
 {
-    <img src="@BD.ObtenerFoto(jugador.Id)" />
+    @<img src="@BD.ObtenerPorId(jugador.Id)"/>
 }
-
-
 
 <form method="post">
     <button type="submit">Abrir sobre</button>

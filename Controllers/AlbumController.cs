@@ -16,6 +16,7 @@ public class AlbumController : Controller
     }
 
     public IActionResult Album(){
+        ViewBag.JugadoresTotales = BD.obtenerTodos();
         return View();
     }
 
