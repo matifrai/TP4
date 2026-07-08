@@ -17,7 +17,6 @@ public class BD{
         }
         return jugadores;
     }
-
     public Jugadores obtenerPorId(int ID){
         Jugadores jugador = null;
         string query = "SELECT * FROM Jugadores WHERE Numero = @pID";
@@ -26,13 +25,8 @@ public class BD{
         }
         return jugador;
     } 
-
-    public List<Jugadores> abrirSobre (){
-        List<Jugadores> jugadores = new List<Jugadores>();
-        string query = "SELECT * FROM Jugadores";
-        using(SqlConnection connection = new SqlConnection(_connectionString)){
-            jugadores = connection.Query<Jugadores>(query).ToList();
-        }
+    public List<Jugadores> obtenerCincoRandom (){
+        List<Jugadores> jugadores = obtenerTodos();
         List<Jugadores> sobre = new List<Jugadores>();
         for(int i = 0; i < 5; i++ ){
             Random aleatorio = new Random();
@@ -41,7 +35,6 @@ public class BD{
         }
         return sobre;
     }
-
     public int VerificarFiguritas (int id){
         string query = "SELECT * FROM FiguritasPegadas WHERE IdFigurita = @idFigurit";
         using(SqlConnection connection = new SqlConnection(_connectionString)){
