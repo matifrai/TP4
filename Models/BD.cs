@@ -17,11 +17,11 @@ public class BD{
         }
         return jugadores;
     }
-    public Jugadores obtenerPorId(int ID){
+    public Jugadores obtenerPorId(int Id){
         Jugadores jugador = null;
-        string query = "SELECT * FROM Jugadores WHERE Numero = @pID";
+        string query = "SELECT * FROM Jugadores WHERE Id = @pID";
         using(SqlConnection connection = new SqlConnection(_connectionString)){
-            jugador = connection.QueryFirstOrDefault<Jugadores>(query, new {pID = ID});
+            jugador = connection.QueryFirstOrDefault<Jugadores>(query, new {pId = Id});
         }
         return jugador;
     } 
@@ -35,20 +35,16 @@ public class BD{
         }
         return sobre;
     }
-    public int VerificarFiguritas (int id){
-        string query = "SELECT * FROM FiguritasPegadas WHERE IdFigurita = @idFigurit";
+    public void pegarFiguritas(int IdJugador){
+        string query = "UPDATE FiguritasUsuario SET Pegada = 1 WHERE IdJugadores = @idJugador";
         using(SqlConnection connection = new SqlConnection(_connectionString)){
-
+            connection.Execute(query, new { IdJugador });
         }
+    }
+    public void guardarFigurita(int IdJugador){
+        
+        
     }
     
-
-    public void PegarFiguritas(int idJugador){
-        string query = "INSERT INTO FiguritaUsuario (IdFigurita, IdAlbum) VALUES (@idFigurita, @idAlbum)";
-        using(SqlConnection connection = new SqlConnection(_connectionString)){
-        
-
-        }
-    }
 
 }

@@ -1,6 +1,8 @@
 namespace TP4.Models;
 
 public class FiguritasUsuario{
-    public bool pegada{get;set;}
-    public int cantidad{get;set;}
+    public int Id { get; set; }
+    public int Cantidad { get; set; }
+    public bool Pegada { get; set; }
+    public int IdJugadores { get; set; }
 }

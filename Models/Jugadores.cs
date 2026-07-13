@@ -1,7 +1,9 @@
 namespace TP4.Models;
 
 public class Jugadores{
-    public string nombre {get;set;}
-    public string club{get;set;}
-    public int numero{get;set;}
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Club { get; set; }
+    public int Numero { get; set; }
+    public int IdSelecciones { get; set; }
 }
