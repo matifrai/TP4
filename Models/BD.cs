@@ -25,13 +25,14 @@ public class BD{
         }
         return jugador;
     } 
-    public List<Jugadores> obtenerCincoRandom (){
+    public List<Jugadores> obtenerCincoRandom(){
         List<Jugadores> jugadores = obtenerTodos();
         List<Jugadores> sobre = new List<Jugadores>();
-        for(int i = 0; i < 5; i++ ){
-            Random aleatorio = new Random();
-            int numero = aleatorio.Next(0, 20);
+        Random aleatorio = new Random();
+        for(int i = 0; i < 5; i++){
+            int numero = aleatorio.Next(0, jugadores.Count);
             sobre.Add(jugadores[numero]);
+            jugadores.RemoveAt(numero);
         }
         return sobre;
     }
@@ -42,8 +43,18 @@ public class BD{
         }
     }
     public void guardarFigurita(int IdJugador){
-        
-        
+        using(SqlConnection connection = new SqlConnection(_connectionString)){
+        string query = "SELECT * FROM FiguritasUsuario WHERE IdJugadores = @IdJugador";
+        FiguritasUsuario figurita = connection.QueryFirstOrDefault<FiguritasUsuario>(query, new { IdJugador });
+        if(figurita == null){
+            query = @"INSERT INTO FiguritasUsuario (Cantidad, Pegada, IdJugadores) VALUES (1, 0, @IdJugador)";
+            connection.Execute(query, new { IdJugador });
+        }
+        else{
+            query = @"UPDATE FiguritasUsuario SET Cantidad = Cantidad + 1 WHERE IdJugadores = @IdJugador";
+            connection.Execute(query, new { IdJugador });
+        }
+    }
     }
     
 

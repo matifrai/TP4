@@ -12,7 +12,7 @@ public class AlbumController : Controller
         return View();
     } 
     public IActionResult Sobres(){
-        return View();
+        return View("~/Views/Home/Sobres.cshtml");
     }
 
     [HttpPost]
