@@ -5,7 +5,7 @@ using TP4.Models;
 namespace TP4.Models;
 
 public class BD{
-    private string _connectionString = @"Server=localhost \SQLEXPRESS; 
+    private string _connectionString = @"Server=localhost; 
     DataBase=TP04; Integrated Security=True;TrustServerCertificate=True;";
 
 
