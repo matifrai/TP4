@@ -26,7 +26,16 @@ public class AlbumController : Controller
     }
 
     public IActionResult Album(){
+        ViewBag.Jugadores = bd.obtenerTodos();
+        ViewBag.Figuritas = bd.obtenerFiguritasUsuario();
+
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult PegarFigurita(int IdJugador){
+        bd.pegarFiguritas(IdJugador);
+        return RedirectToAction("Album");
     }
 
 

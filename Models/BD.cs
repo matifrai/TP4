@@ -5,7 +5,7 @@ using TP4.Models;
 namespace TP4.Models;
 
 public class BD{
-    private string _connectionString = @"Server=localhost; 
+    private string _connectionString = @"Server=localhost \SQLEXPRESS; 
     DataBase=TP04; Integrated Security=True;TrustServerCertificate=True;";
 
 
@@ -56,6 +56,13 @@ public class BD{
             }
         }
     }
-    
+    public List<FiguritasUsuario> obtenerFiguritasUsuario(){
+        List<FiguritasUsuario> figuritas = new List<FiguritasUsuario>();
+        using(SqlConnection connection = new SqlConnection(_connectionString)){
+            string query = "SELECT * FROM FiguritasUsuario";
+            figuritas = connection.Query<FiguritasUsuario>(query).ToList();
+        }
+        return figuritas;
+    }
 
 }

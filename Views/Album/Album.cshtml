@@ -7,46 +7,121 @@
     
     <section>
         <h3>Official sticker collection</h3>
-        <img src="images/LogoMundial.png" />
+        <img src="~/images/LogoMundial.png" />
         <h2>World Cup 2026 - FIFA</h2>
     </section>
     <section>
         <div>
             <h2>Argentina</h2> 
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
+            @foreach(Jugadores jugador in ViewBag.Jugadores){
+                if(jugador.IdSelecciones == 1){
+                    FiguritasUsuario figuritaJugador = null;
+                    foreach(FiguritasUsuario figurita in ViewBag.Figuritas){
+                        if(figurita.IdJugadores == jugador.Id){
+                            figuritaJugador = figurita;
+                        }
+                    }
+
+                    @if(figuritaJugador == null){
+                        <img src="~/images/vacio.png" width="170">
+                    }
+                    else if(figuritaJugador.Pegada){
+                        <img src="~/images/jugadores/@(jugador.Id).svg" width="170">
+                    }
+                    else{
+                        <form action='@Url.Action("PegarFigurita","Album")' method="post">
+                            <input type="hidden" name="IdJugador" value="@jugador.Id">
+                            <button type="submit">Pegar figurita</button>
+                        </form>
+                        <img src="~/images/vacio.png" width="170">
+                    }                    
+                }
+            }
         </div>
         <div>
             <h2>Brasil</h2>
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
+            @foreach(Jugadores jugador in ViewBag.Jugadores){
+                if(jugador.IdSelecciones == 2){
+                    FiguritasUsuario figuritaJugador = null;
+                    foreach(FiguritasUsuario figurita in ViewBag.Figuritas){
+                        if(figurita.IdJugadores == jugador.Id){
+                            figuritaJugador = figurita;
+                        }
+                    }
+
+                    @if(figuritaJugador == null){
+                        <img src="~/images/vacio.png" width="170">
+                    }
+                    else if(figuritaJugador.Pegada){
+                        <img src="~/images/jugadores/@(jugador.Id).svg" width="170">
+                    }
+                    else{
+                        <form action='@Url.Action("PegarFigurita","Album")' method="post">
+                            <input type="hidden" name="IdJugador" value="@jugador.Id">
+                            <button type="submit">Pegar figurita</button>
+                        </form>
+                        <img src="~/images/vacio.png" width="170">
+                    }                    
+                }
+            }
         </div>
         <div>
             <h2>Francia</h2>
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
+            @foreach(Jugadores jugador in ViewBag.Jugadores){
+                if(jugador.IdSelecciones == 3){
+                    FiguritasUsuario figuritaJugador = null;
+                    foreach(FiguritasUsuario figurita in ViewBag.Figuritas){
+                        if(figurita.IdJugadores == jugador.Id){
+                            figuritaJugador = figurita;
+                        }
+                    }
+
+                    @if(figuritaJugador == null){
+                        <img src="~/images/vacio.png" width="170">
+                    }
+                    else if(figuritaJugador.Pegada){
+                        <img src="~/images/jugadores/@(jugador.Id).svg" width="170">
+                    }
+                    else{
+                        <form action='@Url.Action("PegarFigurita","Album")' method="post">
+                            <input type="hidden" name="IdJugador" value="@jugador.Id">
+                            <button type="submit">Pegar figurita</button>
+                        </form>
+                        <img src="~/images/vacio.png" width="170">
+                    }                    
+                }
+            }
         </div>
         <div>
             <h2>Inglaterra</h2>
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
-            <img src="~/images/jugadores/jugador1.svg" />
+            @foreach(Jugadores jugador in ViewBag.Jugadores){
+                if(jugador.IdSelecciones == 4){
+                    FiguritasUsuario figuritaJugador = null;
+                    foreach(FiguritasUsuario figurita in ViewBag.Figuritas){
+                        if(figurita.IdJugadores == jugador.Id){
+                            figuritaJugador = figurita;
+                        }
+                    }
+
+                    @if(figuritaJugador == null){
+                        <img src="~/images/vacio.png" width="170">
+                    }
+                    else if(figuritaJugador.Pegada){
+                        <img src="~/images/jugadores/@(jugador.Id).svg" width="170">
+                    }
+                    else{
+                        <form action='@Url.Action("PegarFigurita","Album")' method="post">
+                            <input type="hidden" name="IdJugador" value="@jugador.Id">
+                            <button type="submit">Pegar figurita</button>
+                        </form>
+                        <img src="~/images/vacio.png" width="170">
+                    }                    
+                }
+            }
         </div>
     </section>
     <section>
-        <div>
-            <a href = "Sobres">Abrir Sobre</a>
-        </div>
+            <a href = "Sobres">Abrir sobres</a>
+            <a href="Index">Volver</a>
     </section>
 </section>
