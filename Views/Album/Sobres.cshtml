@@ -1,22 +1,28 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Sobres";
 }
 
 <h1>Abrir Sobres</h1>
+
+<section class="Foto">
+    <img src="~/images/Sobre.png" alt="">
+</section>
+
 <form action='@Url.Action("AbrirSobre", "Album")' method="post">
     <button type="submit">Abrir Sobre</button>
 </form>
 
-<img src="~/images/Sobre.png" alt="">
+<section class="Figuritas">
+    @if(ViewBag.Sobre != null){
+        <h2>Te salieron:</h2>
 
-@if(ViewBag.Sobre != null){
-    <h2>Te salieron:</h2>
-
-    @foreach(Jugadores jugador in ViewBag.Sobre){
-        <img src="~/images/jugadores/@(jugador.Id).svg" width="170">
+        @foreach(Jugadores jugador in ViewBag.Sobre){
+            <img src="~/images/jugadores/@(jugador.Id).svg" width="170">
+        }
     }
+</section>
 
-}
-
-<a href = "Album">Ver album</a>
-<a href="Index">Volver</a>
+<section class="Botones">
+    <a href = "Album">Ver album</a>
+    <a href="Index">Volver</a>    
+</section>

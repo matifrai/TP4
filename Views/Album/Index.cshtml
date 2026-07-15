@@ -1,13 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Menu";
 }
+<body>
+    <h1>Album digital - Mundial 2026</h1>
 
-<h1>Album digital - Mundial 2026</h1>
+    <section class="Botones">
+        <h4>
+            <a href='@Url.Action("Sobres", "Album")'>Abrir sobre</a>
+        </h4>
 
-<h4>
-    <a href='@Url.Action("Sobres", "Album")'>Abrir sobre</a>
-</h4>
-
-<h4>
-    <a href='@Url.Action("Album", "Album")'>Ver album digital</a>
-</h4>
+        <h4>
+            <a href='@Url.Action("Album", "Album")'>Ver album digital</a>
+        </h4>
+    </section>
+    <section class="Fondo">
+        <img src="~/images/Fondo.jpg" />
+    </section>
+</body>

@@ -29,3 +29,52 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
+h4{
+  width: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(76, 76, 116);
+  border-radius: 15px;
+  padding: 3%;
+  margin: 5%;
+}
+
+.Botones{
+  display: flex;
+  justify-content: center;
+}
+
+.Foto{
+  text-align: center;
+}
+
+.Fondo img{
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+body{
+  background-color: beige;
+}
+
+.Figuritas{
+  text-align: center;
+}
