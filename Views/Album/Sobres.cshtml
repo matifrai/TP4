@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Abrir Sobres</h1>
+<form action='@Url.Action("AbrirSobre", "Album")' method="post">
+    <button type="submit">Abrir Sobre</button>
+</form>
+
+<img src="~/images/Sobre.png" alt="">
+
+@if(ViewBag.Sobre != null){
+    <h2>Te salieron:</h2>
+
+    @foreach(Jugadores jugador in ViewBag.Sobre){
+        <div class="figurita">
+            @if(jugador.Nombre == "Lionel Messi"){
+                <img src="~/images/jugadores/messi.svg" width="180">
+            }
+            else if(jugador.Nombre == "Julián Álvarez"){
+                <img src="~/images/jugadores/julian_alvarez.svg" width="180">
+            }
+            else if(jugador.Nombre == "Enzo Fernández"){
+                <img src="~/images/jugadores/enzo_fernandez.svg" width="180">
+            }
+            else if(jugador.Nombre == "Rodrigo De Paul"){
+                <img src="~/images/jugadores/de_paul.svg" width="180">
+            }
+            else if(jugador.Nombre == "Emiliano Martínez"){
+                <img src="~/images/jugadores/emiliano_martinez.svg" width="180">
+            }
+            else if(jugador.Nombre == "Vinícius Júnior"){
+                <img src="~/images/jugadores/vinicius_junior.svg" width="180">
+            }
+            else if(jugador.Nombre == "Raphinha"){
+                <img src="~/images/jugadores/raphinha.svg" width="180">
+            }
+            else if(jugador.Nombre == "Neymar Jr."){
+                <img src="~/images/jugadores/neymar.svg" width="180">
+            }
+            else if(jugador.Nombre == "Marquinhos"){
+                <img src="~/images/jugadores/marquinhos.svg" width="180">
+            }
+            else if(jugador.Nombre == "Alisson Becker"){
+                <img src="~/images/jugadores/alisson_becker.svg" width="180">
+            }
+            else if(jugador.Nombre == "Kylian Mbappé"){
+                <img src="~/images/jugadores/mbappe.svg" width="180">
+            }
+            else if(jugador.Nombre == "Michael Olise"){
+                <img src="~/images/jugadores/olise.svg" width="180">
+            }
+            else if(jugador.Nombre == "Aurélien Tchouaméni"){
+                <img src="~/images/jugadores/tchouameni.svg" width="180">
+            }
+            else if(jugador.Nombre == "Theo Hernández"){
+                <img src="~/images/jugadores/theo_hernandez.svg" width="180">
+            }
+            else if(jugador.Nombre == "Mike Maignan"){
+                <img src="~/images/jugadores/maignan.svg" width="180">
+            }
+            else if(jugador.Nombre == "Harry Kane"){
+                <img src="~/images/jugadores/kane.svg" width="180">
+            }
+            else if(jugador.Nombre == "Jude Bellingham"){
+                <img src="~/images/jugadores/bellingham.svg" width="180">
+            }
+            else if(jugador.Nombre == "Bukayo Saka"){
+                <img src="~/images/jugadores/saka.svg" width="180">
+            }
+            else if(jugador.Nombre == "Marcus Rashford"){
+                <img src="~/images/jugadores/rashford.svg" width="180">
+            }
+            else if(jugador.Nombre == "Jordan Pickford"){
+                <img src="~/images/jugadores/pickford.svg" width="180">
+            }
+        </div>
+    }
+
+}

@@ -44,17 +44,17 @@ public class BD{
     }
     public void guardarFigurita(int IdJugador){
         using(SqlConnection connection = new SqlConnection(_connectionString)){
-        string query = "SELECT * FROM FiguritasUsuario WHERE IdJugadores = @IdJugador";
-        FiguritasUsuario figurita = connection.QueryFirstOrDefault<FiguritasUsuario>(query, new { IdJugador });
-        if(figurita == null){
-            query = @"INSERT INTO FiguritasUsuario (Cantidad, Pegada, IdJugadores) VALUES (1, 0, @IdJugador)";
-            connection.Execute(query, new { IdJugador });
+            string query = "SELECT * FROM FiguritasUsuario WHERE IdJugadores = @IdJugador";
+            FiguritasUsuario figurita = connection.QueryFirstOrDefault<FiguritasUsuario>(query, new { IdJugador });
+            if(figurita == null){
+                query = @"INSERT INTO FiguritasUsuario (Cantidad, Pegada, IdJugadores) VALUES (1, 0, @IdJugador)";
+                connection.Execute(query, new { IdJugador });
+            }
+            else{
+                query = @"UPDATE FiguritasUsuario SET Cantidad = Cantidad + 1 WHERE IdJugadores = @IdJugador";
+                connection.Execute(query, new { IdJugador });
+            }
         }
-        else{
-            query = @"UPDATE FiguritasUsuario SET Cantidad = Cantidad + 1 WHERE IdJugadores = @IdJugador";
-            connection.Execute(query, new { IdJugador });
-        }
-    }
     }
     
 

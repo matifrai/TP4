@@ -12,7 +12,7 @@ public class AlbumController : Controller
         return View();
     } 
     public IActionResult Sobres(){
-        return View("~/Views/Home/Sobres.cshtml");
+        return View();
     }
 
     [HttpPost]
@@ -21,7 +21,8 @@ public class AlbumController : Controller
         foreach (Jugadores jugador in sobre){
             bd.guardarFigurita(jugador.Id);
         }
-        return View("Sobres", sobre);
+        ViewBag.Sobre = sobre;
+        return View("Sobres");
     }
 
     public IActionResult Album(){

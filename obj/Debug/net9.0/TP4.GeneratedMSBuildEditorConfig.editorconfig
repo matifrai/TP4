@@ -1,7 +1,5 @@
 is_global = true
 build_property.TargetFramework = net9.0
-build_property.TargetFrameworkIdentifier = .NETCoreApp
-build_property.TargetFrameworkVersion = v9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
@@ -11,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TP4
 build_property.RootNamespace = TP4
-build_property.ProjectDir = C:\Users\Matías\Downloads\valo\TP4\
+build_property.ProjectDir = C:\Users\sebak\Downloads\TP4\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Matías\Downloads\valo\TP4
+build_property.MSBuildProjectDirectory = C:\Users\sebak\Downloads\TP4
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/Home/Album.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGJ1bS5jc2h0bWw=
+[C:/Users/sebak/Downloads/TP4/Views/Album/Album.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cQWxidW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/sebak/Downloads/TP4/Views/Album/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/Home/Privacy.cshtml]
+[C:/Users/sebak/Downloads/TP4/Views/Album/Sobres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cU29icmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebak/Downloads/TP4/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/Home/Sobres.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2JyZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Matías/Downloads/valo/TP4/Views/Shared/Error.cshtml]
+[C:/Users/sebak/Downloads/TP4/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/sebak/Downloads/TP4/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/_ViewImports.cshtml]
+[C:/Users/sebak/Downloads/TP4/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/_ViewStart.cshtml]
+[C:/Users/sebak/Downloads/TP4/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matías/Downloads/valo/TP4/Views/Shared/_Layout.cshtml]
+[C:/Users/sebak/Downloads/TP4/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lq6sgqq5um

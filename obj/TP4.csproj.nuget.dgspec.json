@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matías\\Downloads\\valo\\TP4\\TP4.csproj": {}
+    "C:\\Users\\sebak\\Downloads\\TP4\\TP4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matías\\Downloads\\valo\\TP4\\TP4.csproj": {
+    "C:\\Users\\sebak\\Downloads\\TP4\\TP4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matías\\Downloads\\valo\\TP4\\TP4.csproj",
+        "projectUniqueName": "C:\\Users\\sebak\\Downloads\\TP4\\TP4.csproj",
         "projectName": "TP4",
-        "projectPath": "C:\\Users\\Matías\\Downloads\\valo\\TP4\\TP4.csproj",
-        "packagesPath": "C:\\Users\\Matías\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matías\\Downloads\\valo\\TP4\\obj\\",
+        "projectPath": "C:\\Users\\sebak\\Downloads\\TP4\\TP4.csproj",
+        "packagesPath": "C:\\Users\\sebak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebak\\Downloads\\TP4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matías\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sebak\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -64,24 +64,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.14, 9.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[9.0.14, 9.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.14, 9.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.14, 9.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -90,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
